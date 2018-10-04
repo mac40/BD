@@ -30,7 +30,7 @@ Sequence-wise we cannot infer something basing ourselves only on positional info
 
 ### Gene Duplication
 
-> __MISSING IMAGE__
+![Gene Duplication](./Images/gene_duplication.png)
 
 main terms
 
@@ -71,8 +71,39 @@ With approximation noise becomes more blurry and the useful information is highl
 
 ### Dynamic programming
 
-> __SLIDES__
+The alignment is computed in 2 steps
+
+* Computation of the best solution in every box
+* _Backtracking_: choice of the optimal path on the basis of data computed in the boxes
+
+![Dynamic Programming](./Images/dynamic_programming.png)
+
+The difference  between _global_ and _local_ alignment stands in box filling and in the choice of the backtracking starting point
 
 ### Global Alignment
 
-> __SLIDES__
+_Notation_:
+
+* x_i = i-th element of the sequence x
+* y_j = j-th element of the sequence y
+* x_(1..i) = Prefix of x from 1 to i
+* F = optimal score matrix
+  * F(i,j) = optimal alignment x_(1..i) with y_(1..j)
+* d = gap penalty
+* s = scoring matrix
+
+#### Algorithm
+
+1. Build __F__
+2. Initialize F(0,0) = 0; F(i,0) = -d*i; F(0,j)= -d*j
+3. Fill the table from top-left to bottom-right corner using the recursive relationship F(i,j) = max( F(i-1,j-1)+s(x_i,y_i) , F(i-1,j)-d , F(i,j-1)-d )
+
+#### Backtracking
+
+The path always starts from the last cell. By definition it ends at the cell(1,1).
+
+Shifts:
+
+* Diagonal - both
+* Up - gap up
+* Sx - gap down
