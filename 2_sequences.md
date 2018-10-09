@@ -98,7 +98,7 @@ _Notation_:
 2. Initialize F(0,0) = 0; F(i,0) = -d*i; F(0,j)= -d*j
 3. Fill the table from top-left to bottom-right corner using the recursive relationship F(i,j) = max( F(i-1,j-1)+s(x_i,y_i) , F(i-1,j)-d , F(i,j-1)-d )
 
-#### Backtracking
+#### GA-Backtracking
 
 The path always starts from the last cell. By definition it ends at the cell(1,1).
 
@@ -107,3 +107,94 @@ Shifts:
 * Diagonal - both
 * Up - gap up
 * Sx - gap down
+
+### Local Alignment
+
+Discovered a decade after the __global alignment__
+
+F(i,j) = max( 0, F(i-1,j-1)+s(x_i,y_j), F(i-1,j)-d, F(i,j-1)-d)
+
+Local Alignment focuses on region where similarities are
+
+![Local Alignment](./Images/local_alignment.png)
+
+#### LA-Backtracking
+
+The Traceback always starts from the cell with the highest score
+
+### Semi-Global Alignment
+
+![Semi-Global Alignment](./Images/sg_alignment.png)
+
+Matrix initialization (first row or column) is done with 0s as in the “local” alignment
+
+Matrix compilation is done as in the “global” alignment
+
+#### SGA-Backtracking
+
+Traceback always starts from the last row or column
+
+> Semi Global Alignment isn't as used as the prev ones since Local Alignment already does most of the work
+
+---
+
+> Setting the upper-left side to 0s "frees" the match of the left side of the two sequences
+>
+> Forcing to start from the low-right corner forces the match of the right side of the two sequences
+>
+> Both properties are symmetrical
+
+### Suboptimal Alignment
+
+Sometimes it may be useful to have more than one alignment for two sequences. These alignments are called suboptimal.
+
+It is possible to compute them using small variations during the backtracking phase. This phase is then reiterated to get different alignments, up to a __threshold__ T
+
+### Similarity Matrices
+
+__Similarity matrices__ are tables associating a similarity value to each substitution
+
+The most common matrices are based on statistical methods indicating _the substitution frequency among aminoacids in homologous protein families_
+
+Given p_a as the probability of finding residue a, the probability of a random substitution between residues is computed as the probability of two independent events => C(a,b) = p_a * p_b
+
+Probability of a mutation between amminoacids a and b is observed on a set of homolog sequences => M(a,b) = p_(a,b)
+
+The relationship between _match_ and _random_ can be expressed as "likelihood" or "odds ratio" => M(a,b)/C(a,b)
+
+To keep the odd ratio more stable and get a larger number, we take the logarithm
+
+#### PAM matrices
+
+__PAM__ = Point accepted mutation
+
+Matrices are built on homologous sequences showing only 1% of accepted mutations
+
+Two sequences are at 1 PAM of distance if, on average, one mutation on 100 amminoacids has been detected.
+
+![PAM Matrix](./Images/pam_matrix.png)
+
+#### Blosum matrices
+
+__BLOSUM__ = Blocks Amino Acid Substitution Matrices
+
+Blosum is calculated with the same formula of PAM, but has better performances being based on direct observations
+
+The number after BLOSUM name is the percentage of sequence identities that are held by the matrix
+
+### Affine Gap Costs
+
+Two parameters are used for gaps:
+
+* __Gap open__ (γ) = opening the first gap of an indel
+* __Gap extension__ (δ) = extending an already existing indel
+
+Gap penalty:d = γ + δ * (length(i)– 1)
+
+## Alignment differences
+
+* __Global Alignment__ (_red_) impose an alignment which involves all the residues of the two sequences, no matter their similarity
+* __Local Alignment__ (_green_) on the other hand allows to align only most similar residues of the two sequences
+* __Semiglobal Alignment__ (_blue_) tries to combine both methods
+
+![Alignment differences](./Images/alignment_differences.png)
