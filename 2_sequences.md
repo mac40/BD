@@ -198,3 +198,93 @@ Gap penalty:d = γ + δ * (length(i)– 1)
 * __Semiglobal Alignment__ (_blue_) tries to combine both methods
 
 ![Alignment differences](./Images/alignment_differences.png)
+
+## Multiple sequence alignments
+
+Purposes:
+
+* Demonstrate homology
+* Molecular phylogeny
+* Structural prediction
+* Functional prediction
+* Identification of functionally important sites
+
+other thoughts:
+
+* Usage of algorithms for the search of an optimal alignment between two sequences creates problems in its generation
+> __If L is the length of the sequences, it would take O(L^N) units of time to align N sequences. Not feasible!__
+* Usageof euristic methods or progressive based on the hypotesis that the sequences to be aligned are phylogenetically correlated
+
+### CLUSTALW
+
+1. __Pairwise alignment__ of all the starting sequences with:
+    * Approximate methods (n-tuple)
+    * Dynamic algorithm
+2. Scoring of the alignment used to build the __phylogenetic tree__
+3. __Progressive alignment__ of the sequences according to the tree order
+
+> The tree is a dendogram of priority for the pairwise alignment of multiple sequences
+
+Features:
+
+* Sequence weighting
+* Matrix score
+* Special gap score
+
+### Progressive methods: disadvantages
+
+* Once an alignment is fixed is not modified in the subsequent steps. In particular, the gap location cannot change
+* Initial errors are propagated in subsequent steps
+* Initial phylogenetic trees are derived from distance matrices between pairs of independently aligned sequences. These are less reliable than phylogenetic trees derived from complete multiple sequence alignments
+* Alignment errors depend on sequence similarities. Care must be taken in selecting input sequence to be real homologs and of comparable length to avoid the insertion of too many gaps
+* If sequences are too divergent (< 25-30% sequence identity) progressive methods become unreliable
+
+### Other "multiple alignment" methods
+
+* [CLUSTAL-OMEGA](http://www.ebi.ac.uk/Tools/msa/clustalo/) has replaced CLUSTALW
+* [T-COFFEE](http://www.tcoffee.org/)
+* [MAFFT](http://www.ebi.ac.uk/Tools/msa/mafft/)
+
+## Sequence databases
+
+### [Uniprot](http://www.uniprot.org/)
+
+* EMBL-EBI (european bioinformatics institute)
+* SIB (swiss institute of bioinformatics)
+* PIR (protein information resource)
+
+__Swiss-Prot__ manually annotated and reviewed
+
+vs
+
+__TrEMBL__ automatically annotated and not reviewed
+
+![Uniprot](./Images/Uniprot.png)
+
+### [InterPro](http://www.ebi.ac.uk/interpro)
+
+Proteins can be classified into different groups based on:
+
+* The __FAMILIES__ to which they belong
+* The __DOMAINS__ they contain
+* The __SEQUENCE FEATURES__ they possess
+
+> A protein family is a group of proteins that share a common evolutionary origin
+
+![protein family](./Images/prot_family.png)
+
+> Domains are distinct functional and/or structural units in a protein
+
+Usually they are responsible for a particular function or interaction, contributing to the overall role of a protein
+
+Domains may exist in a variety of biological contexts, where similar domains can be found in proteins with different functions
+
+> Sequences features are group of amino acids that confer certain characteristics upon a protein, and may be important for its overall function
+
+![sequences features](./Images/seq_features.png)
+
+#### [Pfam](http://pfam.xfam.org/)
+
+one of the most relevant InterPro database
+
+Collection of multiple sequence alignment based on Hidden Markov Models
