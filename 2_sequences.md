@@ -288,3 +288,67 @@ Domains may exist in a variety of biological contexts, where similar domains can
 one of the most relevant InterPro database
 
 Collection of multiple sequence alignment based on Hidden Markov Models
+
+### Database searches
+
+Interesting searches for non identical sequences
+
+> The main idea is that homologous proteins have a common ancestor and therefore share extensive regions of similarity
+
+In most cases _low levels of similarity_ need to be faced
+
+It is not trivial to distinguish real and false homologs
+
+> __SLIDE 28 L3__
+
+### Statistical Significance
+
+Considering a score system to compare sequences and rank similarities: in order to evaluate the significance of the score we need to assess the __statistical significance__ of the result
+
+![Statistical significance](./Images/stat_significance.png)
+
+Negative cases are naturally more abundant. Trivial reasons
+
+> Where to draw the __Threshold Line__
+
+The Z-score is defined as:
+
+Z = (opt_query-mu_random) / stddev_random
+
+![z-score](./Images/z_score.png)
+
+> The Z-score quantifies the distance of the opt value from the mean as function of the standard deviation.
+
+### E-value
+
+After sampling the scores, we will obtain a distribution similar to the normal one called __extreme value distribution__ (_Gumbel distribution_)
+
+To understand how significative is the score obtained from my real alignment with respect to the observed distribution, the E-value is used.
+
+### [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
+
+Instead of comparing the whole strings we search for a really small subsequence of the original sequence in the database of sequences discarding the ones not containing the choosen subsequence (i.e. the majority of sequences) obtaining an euristically decent solution (we need to consider that we may discard suboptimal solutions since the substring we choose may be the only different part)
+
+The problem is no longer quadratic but linear
+
+![BLAST](./Images/blast.png)
+
+#### Two hit method
+
+The algorithm considers only cases where two hits exists on the same diagonal at the same distance lower than an A parameter before looking for HSPs
+
+To avoid loosing sensitivity, the T threshold has been lowered. This is useful since we tend to discard a lot of sequences a priori
+
+### Consensus Sequences
+
+* can we use this information to extract informations about the degree of sequence conservation for each aminoacid?
+* there is an “evolutionary trace” derived from the natural selection of functional proteins?
+* Then we will analyze the most common techniques to answer these questions, and above all sequence profiles
+
+#### Color usage
+
+![Color usage](./Images/color_usage.png)
+
+#### Sequence logos
+
+![Sequence Logos](./Images/seq_logos.png)
