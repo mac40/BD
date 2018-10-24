@@ -352,3 +352,35 @@ To avoid loosing sensitivity, the T threshold has been lowered. This is useful s
 #### Sequence logos
 
 ![Sequence Logos](./Images/seq_logos.png)
+
+### Beyond PSI-BLAST
+
+Given a protein family, how can we fix the information in the multiple sequence alignment in order to look for other sequences that are still unknown?
+
+The most common alignment methods, even if they use profiles, i.e. they do not evaluate indels positions
+
+__Idea__: create a __Hidden Markov Model__ that best represents reality.
+
+Columns can be treated as states in a hidden markov model with a certain probability of going from one to the next state (not backwards)
+
+The probability from one state to another can be lower than 1, the complement probability takes us to another state allowing us to skip the next column/state or to insert another state an indefinite amount of times before going back to the original column/state
+
+> __reminder__: adding something is arbitrary, deletion is more precise since they work with blanks (fixed number of them)
+
+All previous steps are used to create the HMM that the sequences need to match
+
+> An __HMM__ represents a generalization of the profile concept.
+> * Insertion and deletion probabilities are different at each position
+
+#### Application of HMMs
+
+* HMM are used in the database Pfam
+* The most popular program is HMMER
+
+HMM can be built from the alignment
+
+### Nucleotide sequence databases
+
+__[Ensembl](http://www.ensembl.org/)__
+
+Ensembl connects with UniProt.
