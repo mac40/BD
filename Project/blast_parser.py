@@ -11,6 +11,7 @@ import xml.etree.ElementTree as ET
 
 FILE_POS = os.path.dirname(os.path.abspath(__file__))
 
+
 def get_protein_list(xml_file):
     '''
     parse blast\n
@@ -29,17 +30,17 @@ def get_protein_list(xml_file):
     return hit_list
 
 
-def query_uniprotkb(proteins, output_file_name):
+def query_uniprotkb(proteins, output_file_name, number):
     '''
     query uniprotkb for sequences given a protein list and output them in a fasta file\n
-    INPUT: protein list, name of outputfile\n
+    INPUT: protein list, name of output file, number of proteins to use\n
     OUTPUT: fasta file with proteins sequences\n
     '''
     with open(output_file_name, 'w') as output:
         base_url = 'https://www.uniprot.org/uniprot/'
         extention = '.fasta'
-        for protein in proteins:
-            url = base_url + protein + extention
+        for protein in range(0, number):
+            url = base_url + proteins[protein] + extention
             protein_fasta = urllib.request.urlopen(url).read()
             output.write(protein_fasta.decode("utf-8"))
 
@@ -57,4 +58,6 @@ if __name__ == "__main__":
     else:
         PROTEIN_LIST = get_protein_list(sys.argv[1])
         query_uniprotkb(PROTEIN_LIST,
-                        '{}/parsed_blast_results/{}.fasta'.format(FILE_POS, sys.argv[2]))
+                        '{}/parsed_blast_results/{}.fasta'.format(
+                            FILE_POS, sys.argv[2]),
+                        100)
