@@ -5,14 +5,14 @@ OUTPUT: fasta file containing proteins matched by blast\n
 '''
 
 import os
-import sys
+# import sys
 import urllib.request
 import xml.etree.ElementTree as ET
 
 FILE_POS = os.path.dirname(os.path.abspath(__file__))
 
 
-def get_protein_list(xml_file):
+def xml_to_protein_list(xml_file):
     '''
     parse blast\n
     INPUT: xml_file_name\n
@@ -27,6 +27,20 @@ def get_protein_list(xml_file):
                 protein = hit.get('ac')
                 if protein not in hit_list:
                     hit_list.append(protein)
+    return hit_list
+
+
+def txt_to_protein_list(txt_file):
+    '''
+    parse txt\n
+    INPUT: txt_file\n
+    RETURN: list of proteins
+    '''
+    hit_list = []
+    with open(txt_file, 'r') as infile:
+        for protein in infile:
+            if protein not in hit_list:
+                hit_list.append(protein)
     return hit_list
 
 
@@ -46,18 +60,19 @@ def query_uniprotkb(proteins, output_file_name, number):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 1:
-        print('no parameters specified (type python blast_parser.py -h for help)')
-        sys.exit()
-    elif str(sys.argv[1]) == '-h':
-        print('python blast_parser.py xml_file output_file_name')
-        sys.exit()
-    elif len(sys.argv) < 3:
-        print('missing parameters')
-        sys.exit()
-    else:
-        PROTEIN_LIST = get_protein_list(sys.argv[1])
-        query_uniprotkb(PROTEIN_LIST,
-                        '{}/parsed_blast_results/{}.fasta'.format(
-                            FILE_POS, sys.argv[2]),
-                        100)
+    pass
+    # if len(sys.argv) == 1:
+    #     print('no parameters specified (type python blast_parser.py -h for help)')
+    #     sys.exit()
+    # elif str(sys.argv[1]) == '-h':
+    #     print('python blast_parser.py xml_file output_file_name')
+    #     sys.exit()
+    # elif len(sys.argv) < 3:
+    #     print('missing parameters')
+    #     sys.exit()
+    # else:
+    #     PROTEIN_LIST = xml_to_protein_list(sys.argv[1])
+    #     query_uniprotkb(PROTEIN_LIST,
+    #                     '{}/parsed_blast_results/{}.fasta'.format(
+    #                         FILE_POS, sys.argv[2]),
+    #                     100)
