@@ -40,11 +40,11 @@ def txt_to_protein_list(txt_file):
     with open(txt_file, 'r') as infile:
         for protein in infile:
             if protein not in hit_list:
-                hit_list.append(protein)
+                hit_list.append(protein[:-1])
     return hit_list
 
 
-def query_uniprotkb(proteins, output_file_name, number):
+def query_uniprotkb_uniref90(proteins, output_file_name, number):
     '''
     query uniprotkb for sequences given a protein list and output them in a fasta file\n
     INPUT: protein list, name of output file, number of proteins to use\n
@@ -52,11 +52,17 @@ def query_uniprotkb(proteins, output_file_name, number):
     '''
     with open(output_file_name, 'w') as output:
         base_url = 'https://www.uniprot.org/uniprot/'
+        upi_url = 'https://www.uniprot.org/uniparc/'
         extention = '.fasta'
         for protein in range(0, number):
-            url = base_url + proteins[protein] + extention
-            protein_fasta = urllib.request.urlopen(url).read()
-            output.write(protein_fasta.decode("utf-8"))
+            if proteins[protein][:3] == 'UPI':
+                url = upi_url + proteins[protein] + extention
+                protein_fasta = urllib.request.urlopen(url).read()
+                output.write(protein_fasta.decode("utf-8"))
+            else:
+                url = base_url + proteins[protein] + extention
+                protein_fasta = urllib.request.urlopen(url).read()
+                output.write(protein_fasta.decode("utf-8"))
 
 
 if __name__ == "__main__":
