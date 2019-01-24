@@ -5,7 +5,7 @@ OUTPUT: fasta file containing proteins matched by blast\n
 '''
 
 import os
-# import sys
+import sys
 import urllib.request
 import xml.etree.ElementTree as ET
 
@@ -66,6 +66,10 @@ def query_uniprotkb_uniref90(proteins, output_file_name, number):
 
 
 if __name__ == "__main__":
-    PROTEIN_LIST = txt_to_protein_list("./1_blast_results/uniref90_ids.txt")
+    if sys.argv[1][-3:] == 'txt':
+        PROTEIN_LIST = txt_to_protein_list(sys.argv[1])
+    elif sys.argv[1][-3] == 'xml':
+        PROTEIN_LIST = xml_to_protein_list(sys.argv[1])
+
     query_uniprotkb_uniref90(
-        PROTEIN_LIST, './2_parsed_blast_results/uniref90_blast_100.fasta', 100)
+        PROTEIN_LIST, './2_parsed_blast_results/{}.fasta'.format(sys.argv[2]), 100)
