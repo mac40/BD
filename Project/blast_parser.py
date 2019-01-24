@@ -66,19 +66,6 @@ def query_uniprotkb_uniref90(proteins, output_file_name, number):
 
 
 if __name__ == "__main__":
-    pass
-    # if len(sys.argv) == 1:
-    #     print('no parameters specified (type python blast_parser.py -h for help)')
-    #     sys.exit()
-    # elif str(sys.argv[1]) == '-h':
-    #     print('python blast_parser.py xml_file output_file_name')
-    #     sys.exit()
-    # elif len(sys.argv) < 3:
-    #     print('missing parameters')
-    #     sys.exit()
-    # else:
-    #     PROTEIN_LIST = xml_to_protein_list(sys.argv[1])
-    #     query_uniprotkb(PROTEIN_LIST,
-    #                     '{}/parsed_blast_results/{}.fasta'.format(
-    #                         FILE_POS, sys.argv[2]),
-    #                     100)
+    PROTEIN_LIST = txt_to_protein_list("./1_blast_results/uniref90_ids.txt")
+    query_uniprotkb_uniref90(
+        PROTEIN_LIST, './2_parsed_blast_results/uniref90_blast_100.fasta', 100)
