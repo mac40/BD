@@ -24,6 +24,5 @@ for col in range(0, len(ALIGN[0])):
 for col in reversed(REMOVABLE_COLS):
     ALIGN = ALIGN[:, :col-1] + ALIGN[:, col:]
 
-AlignIO.write(
-    ALIGN, "./4_parsed_clustal_omega_results/muscle_uniref90_100_{}.clw".format(THRESHOLD),
-    "clustal")
+AlignIO.write(ALIGN, "./4_parsed_clustal_omega_results/{}_{}.clw".format(
+    sys.argv[3], THRESHOLD), "clustal")
