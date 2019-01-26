@@ -2,3 +2,4 @@ Slides
 *.pdf
 .ipynb_checkpoints
 __pycache__
+Project/data/uniprot_sprot.fasta
