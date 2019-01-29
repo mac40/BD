@@ -10,7 +10,7 @@ from Bio.SearchIO import parse
 from sklearn.metrics import confusion_matrix
 
 
-def parse_hmmout(file_name):
+def parse_labelled_hmmout(file_name):
     '''
     parse an hmmsearch output and return an array with group, family and score\n
     INPUT: filename of the hmmsearch output\n
@@ -26,6 +26,22 @@ def parse_hmmout(file_name):
                 output = np.array([int(score), group, family])
             else:
                 output = np.vstack([output, [int(score), group, family]])
+    return output
+
+def parse_hmmout(file_name):
+    '''
+    parse an hmmsearch output and return an array with group, family and score\n
+    INPUT: filename of the hmmsearch output\n
+    OUTPUT: np.array [id]
+
+    '''
+    output = np.array([])
+    for qresult in parse(file_name, 'hmmer3-tab'):
+        for item in qresult.hits:
+            if output.size == 0:
+                output = np.array([int(item.bitscore), item.id.split('|')[1]])
+            else:
+                output = np.vstack([output, [int(item.bitscore), item.id.split('|')[1]]])
     return output
 
 
@@ -50,30 +66,37 @@ def binary_confusion_matrix(hmmout, threshold):
             y_true.append(0)
     return confusion_matrix(y_true, y_pred)
 
+def sens_spec_acc(array, image):
+    '''
+    calculate sensitivity, specificity and accurancy for all possible trhesholds\n
+    INPUT: array of values parsed with parse_hmmout,
+    image = True or False if you want to print the graph or not\n
+    OUTPUT: threshold value, if image = TRUE saves a graph in graphs folder
+    '''
+    sensitivity_ar = []
+    specificity_ar = []
+    accurancy_ar = []
+    for trh in range(0, int(array[0][0])):
+        cm_ = binary_confusion_matrix(array, trh)
+        tn_ = cm_[0][0]
+        fp_ = cm_[0][1]
+        fn_ = cm_[1][0]
+        tp_ = cm_[1][1]
+        sensitivity_ar.append((tp_/(tp_+fn_)))
+        specificity_ar.append((tn_/(tn_+fp_)))
+        accurancy_ar.append(((tp_+tn_)/(tp_+tn_+fp_+fn_)))
+    if image:
+        fig_ = plt.figure()
+        ax_ = fig_.add_subplot(1, 1, 1)
+        _ = ax_.plot(sensitivity_ar, 'r', label='sensitivity')
+        _ = ax_.plot(specificity_ar, 'g', label='specificity')
+        _ = ax_.plot(accurancy_ar, 'b', label='accurancy')
+        _ = ax_.axvline(accurancy_ar.index(max(accurancy_ar)))
+        _ = ax_.legend(loc='best')
+        fig_.savefig('./graphs/sens_spec_acc.png')
+    return accurancy_ar.index(max(accurancy_ar))
 
 if __name__ == "__main__":
-    ARRAY = parse_hmmout(sys.argv[1])
-    SENSITIVITY_AR = []
-    SPECIFICITY_AR = []
-    ACCURANCY_AR = []
-    for trh in range(0, int(ARRAY[0][0])):
-        CM = binary_confusion_matrix(ARRAY, trh)
-        TN = CM[0][0]
-        FP = CM[0][1]
-        FN = CM[1][0]
-        TP = CM[1][1]
-        SENSITIVITY = TP/(TP+FN)
-        SPECIFICITY = TN/(TN+FP)
-        ACCURANCY = (TP+TN)/(TP+TN+FP+FN)
-        SENSITIVITY_AR.append(SENSITIVITY)
-        SPECIFICITY_AR.append(SPECIFICITY)
-        ACCURANCY_AR.append(ACCURANCY)
-    FIG = plt.figure()
-    AX = FIG.add_subplot(1, 1, 1)
-    _ = AX.plot(SENSITIVITY_AR, 'r', label='sensitivity')
-    _ = AX.plot(SPECIFICITY_AR, 'g', label='specificity')
-    _ = AX.plot(ACCURANCY_AR, 'b', label='accurancy')
-    _ = AX.axvline(ACCURANCY_AR.index(max(ACCURANCY_AR)))
-    _ = AX.legend(loc='best')
-    FIG.savefig('./graphs/sens_spec_acc.png')
-    print("best threshold = {}".format(ACCURANCY_AR.index(max(ACCURANCY_AR))))
+    ARRAY = parse_labelled_hmmout(sys.argv[1])
+    BEST_THRESHOLD = sens_spec_acc(ARRAY, False)
+    print("best threshold = {}".format(BEST_THRESHOLD))
