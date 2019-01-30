@@ -1,0 +1,79 @@
+>Cluster 0
+0	34350aa, >sp|Q8WZ42|TITIN_HUMAN... *
+>Cluster 1
+0	7968aa, >sp|Q5VST9|OBSCN_HUMAN... *
+>Cluster 2
+0	3267aa, >sp|Q15772|SPEG_HUMAN... *
+>Cluster 3
+0	3097aa, >sp|O75962|TRIO_HUMAN... *
+1	2985aa, >sp|O60229|KALRN_HUMAN... at 0.0/2273:313:247aa/64.25%
+>Cluster 4
+0	1914aa, >sp|Q15746|MYLK_HUMAN... *
+>Cluster 5
+0	1430aa, >sp|P53355|DAPK1_HUMAN... *
+1	454aa, >sp|O43293|DAPK3_HUMAN... at 2.87e-154/276aa/49.77%
+2	414aa, >sp|Q9UEE5|ST17A_HUMAN... at 1.78e-75/296aa/31.88%
+3	372aa, >sp|O94768|ST17B_HUMAN... at 3.89e-78/280aa/36.29%
+4	370aa, >sp|Q9UIK4|DAPK2_HUMAN... at 9.02e-159/355aa/65.67%
+>Cluster 6
+0	970aa, >sp|O00444|PLK4_HUMAN... *
+>Cluster 7
+0	912aa, >sp|Q15139|KPCD1_HUMAN... *
+1	890aa, >sp|O94806|KPCD3_HUMAN... at 0.0/841aa/68.65%
+2	878aa, >sp|Q9BZL6|KPCD2_HUMAN... at 0.0/874aa/69.13%
+>Cluster 8
+0	819aa, >sp|Q32MK0|MYLK3_HUMAN... *
+1	596aa, >sp|Q9H1R3|MYLK2_HUMAN... at 6.66e-150/333aa/34.56%
+2	388aa, >sp|Q86YV6|MYLK4_HUMAN... at 7.24e-158/297aa/52.83%
+>Cluster 9
+0	802aa, >sp|O75582|KS6A5_HUMAN... *
+1	772aa, >sp|O75676|KS6A4_HUMAN... at 0.0/719aa/62.43%
+2	745aa, >sp|Q9UK32|KS6A6_HUMAN... at 0.0/658aa/40.4%
+3	740aa, >sp|P51812|KS6A3_HUMAN... at 0.0/705aa/41.75%
+4	735aa, >sp|Q15418|KS6A1_HUMAN... at 0.0/695aa/40.81%
+5	733aa, >sp|Q15349|KS6A2_HUMAN... at 0.0/685aa/41.06%
+>Cluster 10
+0	766aa, >sp|Q8N568|DCLK2_HUMAN... *
+1	740aa, >sp|O15075|DCLK1_HUMAN... at 0.0/722aa/66.89%
+>Cluster 11
+0	765aa, >sp|Q9NRH2|SNRK_HUMAN... *
+>Cluster 12
+0	666aa, >sp|Q13554|KCC2B_HUMAN... *
+1	558aa, >sp|Q13555|KCC2G_HUMAN... at 0.0/440:133aa/82.79%
+2	499aa, >sp|Q13557|KCC2D_HUMAN... at 0.0/409:133aa/84.96%
+3	478aa, >sp|Q9UQM7|KCC2A_HUMAN... at 0.0/405:128aa/84.93%
+>Cluster 13
+0	661aa, >sp|O60285|NUAK1_HUMAN... *
+1	628aa, >sp|Q9H093|NUAK2_HUMAN... at 3.00e-179/628aa/54.61%
+>Cluster 14
+0	648aa, >sp|Q9C098|DCLK3_HUMAN... *
+>Cluster 15
+0	559aa, >sp|Q13131|AAPK1_HUMAN... *
+>Cluster 16
+0	543aa, >sp|O96017|CHK2_HUMAN... *
+>Cluster 17
+0	514aa, >sp|Q9BYT3|STK33_HUMAN... *
+>Cluster 18
+0	501aa, >sp|Q8NCB2|CAMKV_HUMAN... *
+>Cluster 19
+0	476aa, >sp|Q96NX5|KCC1G_HUMAN... *
+1	385aa, >sp|Q8IU85|KCC1D_HUMAN... at 5.37e-178/324aa/61.29%
+2	370aa, >sp|Q14012|KCC1A_HUMAN... at 3.19e-163/317aa/59.45%
+3	343aa, >sp|Q6P2M8|KCC1B_HUMAN... at 2.06e-148/309aa/56.85%
+>Cluster 20
+0	473aa, >sp|Q16566|KCC4_HUMAN... *
+>Cluster 21
+0	473aa, >sp|Q8IW41|MAPK5_HUMAN... *
+1	400aa, >sp|P49137|MAPK2_HUMAN... at 1.60e-93/360aa/38.25%
+2	382aa, >sp|Q16644|MAPK3_HUMAN... at 5.89e-89/358aa/39%
+>Cluster 22
+0	472aa, >sp|Q6PHR2|ULK3_HUMAN... *
+>Cluster 23
+0	465aa, >sp|Q9HBH9|MKNK2_HUMAN... *
+1	465aa, >sp|Q9BUB5|MKNK1_HUMAN... at 0.0/447aa/62.58%
+>Cluster 24
+0	424aa, >sp|P11801|KPSH1_HUMAN... *
+1	385aa, >sp|Q96QS6|KPSH2_HUMAN... at 3.60e-170/305aa/56.88%
+>Cluster 25
+0	406aa, >sp|P15735|PHKG2_HUMAN... *
+1	387aa, >sp|Q16816|PHKG1_HUMAN... at 0.0/372aa/61.75%
