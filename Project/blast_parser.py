@@ -53,14 +53,14 @@ def query_uniprotkb_uniref90(proteins, output_file_name, number):
     with open(output_file_name, 'w') as output:
         base_url = 'https://www.uniprot.org/uniprot/'
         upi_url = 'https://www.uniprot.org/uniparc/'
-        extention = '.fasta'
+        extension = '.fasta'
         for protein in range(0, number):
             if proteins[protein][:3] == 'UPI':
-                url = upi_url + proteins[protein] + extention
+                url = upi_url + proteins[protein] + extension
                 protein_fasta = urllib.request.urlopen(url).read()
                 output.write(protein_fasta.decode("utf-8"))
             else:
-                url = base_url + proteins[protein] + extention
+                url = base_url + proteins[protein] + extension
                 protein_fasta = urllib.request.urlopen(url).read()
                 output.write(protein_fasta.decode("utf-8"))
 
