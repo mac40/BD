@@ -33,7 +33,6 @@ def parse_hmmout(file_name):
     parse an hmmsearch output and return an array with group, family and score\n
     INPUT: filename of the hmmsearch output\n
     OUTPUT: np.array [id]
-
     '''
     output = np.array([])
     for qresult in parse(file_name, 'hmmer3-tab'):

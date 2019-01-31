@@ -15,11 +15,13 @@ if __name__ == "__main__":
             if re.match(r'>Cluster\s[0-9]*', line):
                 if int(line[9:]) >= 1:
                     cluster.close()
-                cluster = open('cd_hit_results/clusters/{}.fasta'.format(line[1:-1]), 'w')
+                cluster = open(
+                    'cd_hit_results/uniref90_100_90_against_homo_30/clusters/{}.fasta'.format(line[1:-1]), 'w')
             else:
                 regex = re.search(r'[0-9]*\s[0-9]*aa,\s>[a-z]{2}\|(.*)\|.*', line)
                 protein = regex.group(1)
                 url = BASE_URL + protein + EXTENSION
                 protein_fasta = urllib.request.urlopen(url).read()
-                cluster.write(protein_fasta.decode("utf-8"))
+                # cluster.write(protein_fasta.decode("utf-8"))
+                cluster.write('{}\n'.format(protein))
     cluster.close()
