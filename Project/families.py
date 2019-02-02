@@ -63,9 +63,9 @@ if __name__ == "__main__":
     # PROTEINS = get_labelled_proteins_over_threshold(sys.argv[1], 89)
     PROTEINS = get_proteins_over_threshold(sys.argv[1], 89)
     PFAM = get_pfam(PROTEINS)
-    with open('./6_accepted_sequences/pfam.out', 'w') as outfile:
+    with open('./6_results/pfam.out', 'w') as outfile:
         for pf in PFAM:
             outfile.write('{}\n'.format(pf))
 
     # query_uniprotkb_uniref90(
-    #     PROTEINS, './6_accepted_sequences/{}.fasta'.format(sys.argv[2]), len(PROTEINS))
+    #     PROTEINS, './6_results/{}.fasta'.format(sys.argv[2]), len(PROTEINS))

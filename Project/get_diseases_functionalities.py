@@ -74,14 +74,14 @@ if __name__ == "__main__":
     PROTEINS = get_proteins_over_threshold(
         './5_hmms/hmm search results/uniref90_100_90_against_homo.out', 89)
     # DISEASES = get_diseases(PROTEINS)
-    # with open('./6_accepted_sequences/diseases.out', 'w') as out:
+    # with open('./6_results/diseases.out', 'w') as out:
     #     for disease in DISEASES:
     #         out.write('{}\n'.format(disease))
     # FUNCTIONS = functions(PROTEINS)
-    # with open('./6_accepted_sequences/functions.out', 'w') as out:
+    # with open('./6_results/functions.out', 'w') as out:
     #     for function in FUNCTIONS:
     #         out.write('{}: {}\n'.format(function[0], function[1]))
     CATALYTIC_ACTIVITIES = catalytic_activities(PROTEINS)
-    with open('./6_accepted_sequences/catalytic_activities.out', 'w') as out:
+    with open('./6_results/catalytic_activities.out', 'w') as out:
         for cat in CATALYTIC_ACTIVITIES:
             out.write('{}: {}\n'.format(cat[0], cat[1]))
