@@ -1,3 +1,4 @@
+CAMK MLCK
 Q9H1R3: [myosin light chain]-L-serine + ATP = [myosin light chain]-O-phospho-L-serine + ADP + H(+)
 Q9H1R3: [myosin light chain]-L-threonine + ATP = [myosin light chain]-O-phospho-L-threonine + ADP + H(+)
 Q32MK0: [myosin light chain]-L-serine + ATP = [myosin light chain]-O-phospho-L-serine + ADP + H(+)
@@ -6,8 +7,8 @@ Q86YV6: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q86YV6: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 Q15746: [myosin light chain]-L-serine + ATP = [myosin light chain]-O-phospho-L-serine + ADP + H(+)
 Q15746: [myosin light chain]-L-threonine + ATP = [myosin light chain]-O-phospho-L-threonine + ADP + H(+)
-Q15772: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
-Q15772: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+
+CAMK DAPK
 Q9UIK4: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q9UIK4: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 P53355: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
@@ -16,14 +17,12 @@ O43293: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 O43293: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 Q9UEE5: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q9UEE5: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
-Q5VST9: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
-Q5VST9: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
-Q15418: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
-Q15418: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
-Q8WZ42: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
-Q8WZ42: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 O94768: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 O94768: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+
+AGK RSK
+Q15418: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
+Q15418: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 P51812: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 P51812: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 Q15349: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
@@ -32,72 +31,88 @@ Q9UK32: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q9UK32: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 O75582: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 O75582: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+O75676: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
+O75676: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+
+CAMK PSK
 P11801: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 P11801: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+Q96QS6: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
+Q96QS6: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+
+CAMK CAMK1
 Q8IU85: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q8IU85: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 Q16566: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q16566: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
-O75676: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
-O75676: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 Q14012: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q14012: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
-Q96QS6: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
-Q96QS6: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
-O60229: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
-O60229: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
-Q9C098: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
-Q9C098: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
-O75962: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
-O75962: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
-Q9UQM7: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
-Q9UQM7: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 Q96NX5: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q96NX5: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+Q6P2M8: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
+Q6P2M8: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+
+CAMK Trio
+O60229: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
+O60229: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+O75962: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
+O75962: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+
+CAMK CAMK2
+Q9UQM7: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
+Q9UQM7: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 Q13557: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q13557: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 Q13554: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q13554: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 Q13555: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q13555: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+
+CAMK PKD
 O94806: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 O94806: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
-Q6P2M8: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
-Q6P2M8: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 Q15139: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q15139: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
-O15075: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
-O15075: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 Q9BZL6: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q9BZL6: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
-Q9BYT3: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
-Q9BYT3: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+
+CAMK DCAMKL
+O15075: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
+O15075: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 Q8N568: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q8N568: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+
+CAMK CAMK-Unique
+Q9BYT3: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
+Q9BYT3: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+
+CAMK PHK
 Q16816: 2 ATP + phosphorylase b = 2 ADP + phosphorylase a.
 Q16816: [tau protein]-L-serine + ATP = [tau protein]-O-phospho-L-serine + ADP + H(+)
 Q16816: [tau protein]-L-threonine + ATP = [tau protein]-O-phospho-L-threonine + ADP + H(+)
 Q16816: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q16816: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+P15735: 2 ATP + phosphorylase b = 2 ADP + phosphorylase a.
+
+CAMK MAPKAPK
 Q9HBH9: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q9HBH9: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
-O96017: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
-O96017: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
-Q9NRH2: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
-Q9NRH2: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 Q16644: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q16644: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
-O60285: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
-O60285: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 P49137: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 P49137: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 Q9BUB5: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q9BUB5: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 Q8IW41: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q8IW41: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
-P15735: 2 ATP + phosphorylase b = 2 ADP + phosphorylase a.
-O00444: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
-O00444: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+
+CAMK RAD53
+O96017: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
+O96017: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+
+CAMK CAMKL
+O60285: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
+O60285: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 Q13131: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q13131: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 Q13131: [acetyl-CoA carboxylase]-L-serine + ATP = [acetyl-CoA carboxylase]-O-phospho-L-serine + ADP + H(+)
@@ -106,5 +121,22 @@ Q13131: [tau protein]-L-serine + ATP = [tau protein]-O-phospho-L-serine + ADP + 
 Q13131: [tau protein]-L-threonine + ATP = [tau protein]-O-phospho-L-threonine + ADP + H(+)
 Q9H093: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q9H093: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+
+Other PLK
+O00444: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
+O00444: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+
+
+UNIDENTIFIED
+Q15772: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
+Q15772: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+Q5VST9: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
+Q5VST9: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+Q8WZ42: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
+Q8WZ42: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+Q9C098: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
+Q9C098: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
+Q9NRH2: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
+Q9NRH2: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
 Q6PHR2: ATP + L-seryl-[protein] = ADP + H(+) + O-phospho-L-seryl-[protein]
 Q6PHR2: ATP + L-threonyl-[protein] = ADP + H(+) + O-phospho-L-threonyl-[protein]
