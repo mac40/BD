@@ -35,5 +35,34 @@ def disorder_content():
     _ = ax_.set_xticklabels(labels, rotation=90)
     plt.savefig('./graphs/avg_disorder_content.png')
 
+def strings_number():
+    '''
+    plot number of strings
+    '''
+    values = [4, 5, 6, 2, 5, 2, 4, 3, 2, 2, 2, 5, 3, 1]
+    labels = ['MLCK', 'DAPK',
+              'RSK', 'PSK', 'CAMK1', 'Trio', 'CAMK2',
+              'PKD', 'DCAMKL', 'CAMK-Unique', 'PHK', 'MAPKAPK',
+              'CAMKL', 'Other PLK']
+    fig, ax_ = plt.subplots()
+    fig.subplots_adjust(bottom=0.3)
+    _ = ax_.bar(labels, values)
+    _ = ax_.set_xticklabels(labels, rotation=90)
+    plt.savefig('./graphs/strings_number.png')
+
+def putative_substrates_num():
+    '''
+    plot number of putative substrates per family
+    '''
+    values = [1, 2, 6, 3, 1, 2, 4, 3, 1]
+    labels = ['MLCK', 'DAPK', 'RSK', 'CAMK1', 'Trio', 'PKD', 'MAPKAPK', 'CAMKL', 'PLK']
+    fig, ax_ = plt.subplots()
+    fig.subplots_adjust(bottom=0.3)
+    _ = ax_.bar(labels, values)
+    _ = ax_.set_xticklabels(labels, rotation=90)
+    plt.savefig('./graphs/put_sub_num.png')
+
 if __name__ == "__main__":
-    disorder_content()
+    # disorder_content()
+    # strings_number()
+    putative_substrates_num()
